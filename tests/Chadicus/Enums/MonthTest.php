@@ -1,10 +1,10 @@
 <?php
-namespace Chadicus\DateTime\Enums;
+namespace Chadicus\Enums;
 
 /**
- * Unit tests for the Chadicus\DateTime\Enums\Month class.
+ * Unit tests for the Chadicus\Enums\Month class.
  *
- * @coversDefaultClass \Chadicus\DateTime\Enums\Month
+ * @coversDefaultClass \Chadicus\Enums\Month
  * @covers ::<private>
  */
 final class MonthTests extends \PHPUnit_Framework_TestCase
@@ -29,7 +29,7 @@ final class MonthTests extends \PHPUnit_Framework_TestCase
      * @test
      * @covers ::__callStatic
      * @expectedException \UnexpectedValueException
-     * @expectedExceptionMessage 'Invalid' is not a valid Chadicus\DateTime\Enums\Month
+     * @expectedExceptionMessage 'Invalid' is not a valid Chadicus\Enums\Month
      *
      * @return void
      */
