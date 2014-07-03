@@ -4,7 +4,7 @@ namespace Chadicus\Enum;
 /**
  * Defines the Month Enum class.
  */
-final class Month extends EnumAbstract
+final class Month extends AbstractEnum
 {
     const JANUARY = 'january';
     const FEBRUARY = 'february';

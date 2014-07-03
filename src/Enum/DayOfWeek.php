@@ -4,7 +4,7 @@ namespace Chadicus\Enum;
 /**
  * Defines the DayOfWeek Enum class.
  */
-final class DayOfWeek extends EnumAbstract
+final class DayOfWeek extends AbstractEnum
 {
     const MONDAY = 'monday';
     const TUESDAY = 'tuesday';

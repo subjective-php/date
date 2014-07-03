@@ -2,9 +2,9 @@
 namespace Chadicus\Enum;
 
 /**
- * Defines the base EnumbAbstract class.
+ * Defines the base AbstractEnum class.
  */
-abstract class EnumAbstract
+abstract class AbstractEnum
 {
     /**
      * String value of enum.
