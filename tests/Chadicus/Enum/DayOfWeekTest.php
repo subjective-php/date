@@ -1,10 +1,10 @@
 <?php
-namespace Chadicus\Enums;
+namespace Chadicus\Enum;
 
 /**
- * Unit tests for the Chadicus\Enums\DayOfWeek class.
+ * Unit tests for the Chadicus\Enum\DayOfWeek class.
  *
- * @coversDefaultClass \Chadicus\Enums\DayOfWeek
+ * @coversDefaultClass \Chadicus\Enum\DayOfWeek
  * @covers ::<private>
  */
 final class DayOfWeekTests extends \PHPUnit_Framework_TestCase
@@ -29,7 +29,7 @@ final class DayOfWeekTests extends \PHPUnit_Framework_TestCase
      * @test
      * @covers ::__callStatic
      * @expectedException \UnexpectedValueException
-     * @expectedExceptionMessage 'Invalid' is not a valid Chadicus\Enums\DayOfWeek
+     * @expectedExceptionMessage 'Invalid' is not a valid Chadicus\Enum\DayOfWeek
      *
      * @return void
      */

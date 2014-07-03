@@ -1,5 +1,5 @@
 <?php
-namespace Chadicus\Enums;
+namespace Chadicus\Enum;
 
 /**
  * Defines the Month Enum class.
