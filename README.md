@@ -1,5 +1,5 @@
 #Chadicus\DateTime
-[![Build Status](https://travis-ci.org/chadicus/date-php.png)](https://travis-ci.org/chadicus/date-php)                      
+[![Build Status](http://img.shields.io/travis/chadicus/date-php.svg?style=flat)](https://travis-ci.org/chadicus/date-php)                      
                                                                                                                          
 
 ## Requirements
