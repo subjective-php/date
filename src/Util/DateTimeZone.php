@@ -28,6 +28,7 @@ class DateTimeZone
      */
     final public static function getAbbreviationFromName($name)
     {
-        return (new \DateTime('now', new \DateTimeZone($name)))->format('T');
+        $now = new \DateTime('now', new \DateTimeZone($name));
+        return $now->format('T');
     }
 }
