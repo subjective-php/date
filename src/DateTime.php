@@ -1,37 +1,11 @@
 <?php
 namespace Chadicus\Util;
 
-use Chadicus\Enum;
-
 /**
  * Utility class for \DateTime objects.
  */
 class DateTime
 {
-    /**
-     * Returns the Day of the week for the given date time.
-     *
-     * @param \DateTime $dateTime The date/time object.
-     *
-     * @return Enum\DayOfWeek
-     */
-    final public static function getDayOfWeek(\DateTime $dateTime)
-    {
-        return call_user_func("\\Chadicus\\Enum\\DayOfWeek::{$dateTime->format('l')}");
-    }
-
-    /**
-     * Returns the month for the given date time.
-     *
-     * @param \DateTime $dateTime The date/time object.
-     *
-     * @return Enum\Month
-     */
-    final public static function getMonth(\DateTime $dateTime)
-    {
-        return call_user_func("\\Chadicus\\Enum\\Month::{$dateTime->format('F')}");
-    }
-
     /**
      * Returns true if the given date time is a Saturday or Sunday.
      *
@@ -56,5 +30,19 @@ class DateTime
     {
         //ISO-8601 numeric representation of the day of the week, 1 (for Monday) through 7 (for Sunday)
         return $dateTime->format('N') < 6;
+    }
+
+    /**
+     * Returns true if the given dates occur on the same year, month and day.
+     *
+     * @param \DateTime $thisDate A date to compare.
+     * @param \DateTime $thatDate A date to compare.
+     *
+     * @return boolean
+     */
+    final public static function isSameDay(\DateTime $thisDate, \DateTime $thatDate)
+    {
+        $interval = $thisDate->diff($thatDate);
+        return !$interval->y && !$interval->m && !$interval->d;
     }
 }
