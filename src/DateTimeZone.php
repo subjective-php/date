@@ -61,10 +61,10 @@ class DateTimeZone
             throw new \InvalidArgumentException('$gmtOffset must be an integer');
         }
 
-        if ($isDaylightSavings !== true && $isDaylightSavings !== false) {
+        if (!is_bool($isDaylightSavings)) {
             throw new \InvalidArgumentException('$isDaylightSavings must be a boolean');
         }
 
-        return self::fromString(timezone_name_from_abbr('', $gmtOffset, $isDaylightSavings ? 1 : 0));
+        return self::fromString(timezone_name_from_abbr('', $gmtOffset, (int)$isDaylightSavings));
     }
 }
