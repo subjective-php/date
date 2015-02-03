@@ -89,7 +89,6 @@ final class DateTimeZoneTest extends \PHPUnit_Framework_TestCase
     {
         return [
             ['WIB', 'Asia/Jakarta'],
-            ['WIT', 'Asia/Jakarta'],
             ['FET', 'Europe/Helsinki'],
             ['AEST', 'Australia/Tasmania'],
             ['AWST', 'Australia/West'],
