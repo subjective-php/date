@@ -36,7 +36,7 @@ class DateTimeZone
                 return $default;
             }
 
-            if (!is_string($default) || trim($default) === '') {
+            if (!is_string($default)) {
                 throw new \InvalidArgumentException('$default must be a \DateTimeZone or string');
             }
 
