@@ -55,4 +55,18 @@ final class DateTimeTest extends \PHPUnit_Framework_TestCase
         $this->assertNotEquals($thisDate->format('Y-m-d'), $thatDate->format('Y-m-d'));
         $this->assertTrue(DateTime::isSameDay($thisDate, $thatDate));
     }
+
+    /**
+     * Verify basic behavior of isDaylightSavings().
+     *
+     * @test
+     * @covers ::isDaylightSavings
+     *
+     * @return void
+     */
+    public function isDaylightSavings()
+    {
+        $dateTime = new \DateTime('now', new \DateTimeZone('Pacific/Honolulu'));
+        $this->assertFalse(DateTime::isDaylightSavings($dateTime));
+    }
 }

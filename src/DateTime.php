@@ -45,4 +45,17 @@ class DateTime
         $interval = $thisDate->diff($thatDate);
         return !$interval->y && !$interval->m && !$interval->d;
     }
+
+    /**
+     * Indicates whether the given instance of DateTime is within the daylight saving time range for the current time
+     * zone.
+     *
+     * @param \DateTime $dateTime The date/time object.
+     *
+     * @return boolean
+     */
+    final public static function isDaylightSavings(\DateTime $dateTime)
+    {
+        return (bool)$dateTime->format('I');
+    }
 }
