@@ -39,21 +39,6 @@ final class DateTimeZoneTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Verify behavior of fromString() with invalid default timezone.
-     *
-     * @test
-     * @covers ::fromString
-     * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage $default must be a \DateTimeZone or string
-     *
-     * @return void
-     */
-    public function fromStringInvalidDefaultTimeZone()
-    {
-        DateTimeZone::fromString('Invalid', false);
-    }
-
-    /**
      * Verify fromString() defaults to UTC on error.
      *
      * @test
@@ -63,7 +48,7 @@ final class DateTimeZoneTest extends \PHPUnit_Framework_TestCase
      */
     public function fromStringWithInvalidAbbreviation()
     {
-        $this->assertSame('UTC', DateTimeZone::fromString('NOT VALID')->getName());
+        $this->assertNull(DateTimeZone::fromString('NOT VALID'));
     }
 
     /**

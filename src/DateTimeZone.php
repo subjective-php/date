@@ -16,14 +16,14 @@ class DateTimeZone
     /**
      * Returns a \DateTimeZone instance for the give nameOrAbbreviation.
      *
-     * @param string              $nameOrAbbreviation The timezone nameOrAbbreviation.
-     * @param string|DateTimeZone $default      The default timezone to return if none can be created.
+     * @param string       $nameOrAbbreviation The timezone nameOrAbbreviation.
+     * @param DateTimeZone $default            The default timezone to return if none can be created.
      *
      * @return \DateTimeZone
      *
      * @throws \InvalidArgumentException Thrown if $default is not a string or \DateTimeZone object
      */
-    final public static function fromString($nameOrAbbreviation, $default = 'UTC')
+    final public static function fromString($nameOrAbbreviation, \DateTimeZone $default = null)
     {
         try {
             return new \DateTimeZone($nameOrAbbreviation);
@@ -32,15 +32,7 @@ class DateTimeZone
                 return new \DateTimeZone(self::$outliers[$nameOrAbbreviation]);
             }
 
-            if ($default instanceof \DateTimeZone) {
-                return $default;
-            }
-
-            if (!is_string($default)) {
-                throw new \InvalidArgumentException('$default must be a \DateTimeZone or string');
-            }
-
-            return new \DateTimeZone($default);
+            return $default;
         }
     }
 
