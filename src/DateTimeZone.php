@@ -59,4 +59,23 @@ class DateTimeZone
 
         return self::fromString(timezone_name_from_abbr('', $gmtOffset, (int)$isDaylightSavings));
     }
+
+    /**
+     * Returns the long name of the given \DateTimeZone.
+     *
+     * @param \DateTimeZone
+     *
+     * @return string
+     */
+    final public static function getLongName(\DateTimeZone $timezone)
+    {
+        $nameFromTimeZone = $timezone->getName();
+        if (strlen($nameFromTimeZone) > 6) {
+            return $nameFromTimeZone;
+        }
+
+        $nameFromAbbr = timezone_name_from_abbr($nameFromTimeZone);
+
+        return $nameFromAbbr === false ? $nameFromTimeZone : $nameFromAbbr;
+    }
 }

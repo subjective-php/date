@@ -127,4 +127,32 @@ final class DateTimeZoneTest extends \PHPUnit_Framework_TestCase
     {
         DateTimeZone::fromOffset(-36000, 0);
     }
+
+    /**
+     * Verify basic behavior of getLongName().
+     *
+     * @test
+     * @covers ::getLongName
+     *
+     * @return void
+     */
+    public function getLongName()
+    {
+        $timezone = new \DateTimeZone('HST');
+        $this->assertSame('Pacific/Honolulu', DateTimeZone::getLongName($timezone));
+    }
+
+    /**
+     * Verify behavior of getLongName() with outlier.
+     *
+     * @test
+     * @covers ::getLongName
+     *
+     * @return void
+     */
+    public function getLongNameOutlier()
+    {
+        $timezone = new \DateTimeZone('UTC');
+        $this->assertSame('UTC', DateTimeZone::getLongName($timezone));
+    }
 }
