@@ -143,6 +143,20 @@ final class DateTimeZoneTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Verify basic behavior of getLongName().
+     *
+     * @test
+     * @covers ::getLongName
+     *
+     * @return void
+     */
+    public function getLongNameWithLongName()
+    {
+        $timezone = new \DateTimeZone('Pacific/Honolulu');
+        $this->assertSame('Pacific/Honolulu', DateTimeZone::getLongName($timezone));
+    }
+
+    /**
      * Verify behavior of getLongName() with outlier.
      *
      * @test
