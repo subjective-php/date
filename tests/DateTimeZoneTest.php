@@ -62,6 +62,11 @@ final class DateTimeZoneTest extends \PHPUnit_Framework_TestCase
      */
     public function fromStringOutliers($abbreviation, $expected)
     {
+        if (timezone_name_from_abbr($abbreviation) !== false) {
+            $this->markTestSkipped("The timezone abbreviation '{$abbreviation}' is not considered an outlier on this system");
+            return;
+        }
+
         $this->assertSame($expected, DateTimeZone::fromString($abbreviation)->getName());
     }
 
