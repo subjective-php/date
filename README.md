@@ -31,9 +31,10 @@ Developers may be contacted at:
  * [Pull Requests](https://github.com/chadicus/date-php/pulls)
  * [Issues](https://github.com/chadicus/date-php/issues)
 
-##Project Build
+##Run Unit Tests
 With a checkout of the code get [Composer](http://getcomposer.org) in your PATH and run:
 
 ```sh
-./build.php
+composer install
+./vendor/bin/phpunit
 ```
