@@ -16,8 +16,8 @@ class DateTimeZone
     /**
      * Returns a \DateTimeZone instance for the give nameOrAbbreviation.
      *
-     * @param string       $nameOrAbbreviation The timezone nameOrAbbreviation.
-     * @param DateTimeZone $default            The default timezone to return if none can be created.
+     * @param string        $nameOrAbbreviation The timezone nameOrAbbreviation.
+     * @param \DateTimeZone $default            The default timezone to return if none can be created.
      *
      * @return \DateTimeZone
      *
