@@ -1,7 +1,7 @@
 <?php
 namespace Chadicus\Util;
 
-class DateTimeZone
+abstract class DateTimeZone
 {
     private static $outliers = [
         'WIB' => 'Asia/Jakarta',  //Western Indonesian Time

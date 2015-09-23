@@ -4,7 +4,7 @@ namespace Chadicus\Util;
 /**
  * Utility class for \DateTime objects.
  */
-class DateTime
+abstract class DateTime
 {
     /**
      * Returns true if the given date time is a Saturday or Sunday.
