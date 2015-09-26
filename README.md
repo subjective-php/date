@@ -9,6 +9,8 @@
 
 [![Dependency Status](https://www.versioneye.com/user/projects/5606a7295a262f001e0001aa/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5606a7295a262f001e0001aa)
 
+[![Documentation](https://img.shields.io/badge/reference-phpdoc-blue.svg?style=flat)](http://pholiophp.org/chadicus/date)
+
 A collection of various PHP classes for use with file systems
 
 ## Requirements
