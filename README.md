@@ -7,6 +7,8 @@
 [![Total Downloads](http://img.shields.io/packagist/dt/chadicus/date.svg?style=flat)](https://packagist.org/packages/chadicus/date)
 [![License](http://img.shields.io/packagist/l/chadicus/date.svg?style=flat)](https://packagist.org/packages/chadicus/date)
 
+[![Dependency Status](https://www.versioneye.com/user/projects/5606a7295a262f001e0001aa/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5606a7295a262f001e0001aa)
+
 A collection of various PHP classes for use with file systems
 
 ## Requirements
