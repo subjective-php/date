@@ -1,5 +1,5 @@
 # Chadicus\Date
-[![Build Status](http://img.shields.io/travis/chadicus/date-php.svg?style=flat)](https://travis-ci.org/chadicus/date-php)
+[![Build Status](https://travis-ci.org/chadicus/date-php.svg?branch=master)](https://travis-ci.org/chadicus/date-php)
 [![Scrutinizer Code Quality](http://img.shields.io/scrutinizer/g/chadicus/date-php.svg?style=flat)](https://scrutinizer-ci.com/g/chadicus/date-php/)
 [![Code Coverage](http://img.shields.io/coveralls/chadicus/date-php.svg?style=flat)](https://coveralls.io/r/chadicus/date-php)
 
