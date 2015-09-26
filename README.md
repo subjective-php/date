@@ -1,7 +1,7 @@
 # Chadicus\Date
 [![Build Status](https://travis-ci.org/chadicus/date-php.svg?branch=master)](https://travis-ci.org/chadicus/date-php)
 [![Scrutinizer Code Quality](http://img.shields.io/scrutinizer/g/chadicus/date-php.svg?style=flat)](https://scrutinizer-ci.com/g/chadicus/date-php/)
-[![Code Coverage](http://img.shields.io/coveralls/chadicus/date-php.svg?style=flat)](https://coveralls.io/r/chadicus/date-php)
+[![Coverage Status](https://coveralls.io/repos/chadicus/date-php/badge.svg?branch=master&service=github)](https://coveralls.io/github/chadicus/date-php?branch=master)
 
 [![Latest Stable Version](http://img.shields.io/packagist/v/chadicus/date.svg?style=flat)](https://packagist.org/packages/chadicus/date)
 [![Total Downloads](http://img.shields.io/packagist/dt/chadicus/date.svg?style=flat)](https://packagist.org/packages/chadicus/date)
