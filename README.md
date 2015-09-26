@@ -2,11 +2,10 @@
 [![Build Status](http://img.shields.io/travis/chadicus/date-php.svg?style=flat)](https://travis-ci.org/chadicus/date-php)
 [![Scrutinizer Code Quality](http://img.shields.io/scrutinizer/g/chadicus/date-php.svg?style=flat)](https://scrutinizer-ci.com/g/chadicus/date-php/)
 [![Code Coverage](http://img.shields.io/coveralls/chadicus/date-php.svg?style=flat)](https://coveralls.io/r/chadicus/date-php)
+
 [![Latest Stable Version](http://img.shields.io/packagist/v/chadicus/date.svg?style=flat)](https://packagist.org/packages/chadicus/date)
 [![Total Downloads](http://img.shields.io/packagist/dt/chadicus/date.svg?style=flat)](https://packagist.org/packages/chadicus/date)
 [![License](http://img.shields.io/packagist/l/chadicus/date.svg?style=flat)](https://packagist.org/packages/chadicus/date)
-
-
 
 A collection of various PHP classes for use with file systems
 
