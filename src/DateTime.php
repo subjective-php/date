@@ -58,4 +58,25 @@ abstract class DateTime
     {
         return (bool)$dateTime->format('I');
     }
+
+    /**
+     * Returns true if the given date is between the provided date range.
+     *
+     * @param \DateTime $subjectDate The date/time object being checked.
+     * @param \DateTime $startDate The start date/time object.
+     * @param \DateTime $endDate The end date/time object.
+     *
+     * @return boolean
+     * @throws \DomainException Thrown when an invalid date range is provided.
+     */
+    final public static function isInRange(\DateTime $subjectDate, \DateTime $startDate, \DateTime $endDate)
+    {
+        $subjectTimestamp = $subjectDate->getTimestamp();
+        $startDateTimestamp = $startDate->getTimestamp();
+        $endDateTimestamp = $endDate->getTimestamp();
+        if ($startDateTimestamp > $endDateTimestamp) {
+            throw new \DomainException('Invalid date range provided.');
+        }
+        return ($subjectTimestamp >= $startDateTimestamp && $subjectTimestamp <= $endDateTimestamp);
+    }
 }
