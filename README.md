@@ -1,13 +1,16 @@
 # Chadicus\Date
 [![Build Status](https://travis-ci.org/chadicus/date-php.svg?branch=master)](https://travis-ci.org/chadicus/date-php)
-[![Scrutinizer Code Quality](http://img.shields.io/scrutinizer/g/chadicus/date-php.svg?style=flat)](https://scrutinizer-ci.com/g/chadicus/date-php/)
-[![Coverage Status](https://coveralls.io/repos/chadicus/date-php/badge.svg?branch=master&service=github)](https://coveralls.io/github/chadicus/date-php?branch=master)
-
-[![Latest Stable Version](http://img.shields.io/packagist/v/chadicus/date.svg?style=flat)](https://packagist.org/packages/chadicus/date)
-[![Total Downloads](http://img.shields.io/packagist/dt/chadicus/date.svg?style=flat)](https://packagist.org/packages/chadicus/date)
-[![License](http://img.shields.io/packagist/l/chadicus/date.svg?style=flat)](https://packagist.org/packages/chadicus/date)
-
+[![Code Quality](https://scrutinizer-ci.com/g/chadicus/date-php/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/chadicus/date-php/?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/chadicus/date-php/badge.svg?branch=master)](https://coveralls.io/github/chadicus/date-php?branch=master)
 [![Dependency Status](https://www.versioneye.com/user/projects/5606a7295a262f001e0001aa/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5606a7295a262f001e0001aa)
+
+[![Latest Stable Version](https://poser.pugx.org/chadicus/date/v/stable)](https://packagist.org/packages/chadicus/date)
+[![Latest Unstable Version](https://poser.pugx.org/chadicus/date/v/unstable)](https://packagist.org/packages/chadicus/date)
+[![License](https://poser.pugx.org/chadicus/date/license)](https://packagist.org/packages/chadicus/date)
+
+[![Total Downloads](https://poser.pugx.org/chadicus/date/downloads)](https://packagist.org/packages/chadicus/date)
+[![Monthly Downloads](https://poser.pugx.org/chadicus/date/d/monthly)](https://packagist.org/packages/chadicus/date)
+[![Daily Downloads](https://poser.pugx.org/chadicus/date/d/daily)](https://packagist.org/packages/chadicus/date)
 
 [![Documentation](https://img.shields.io/badge/reference-phpdoc-blue.svg?style=flat)](http://pholiophp.org/chadicus/date)
 
