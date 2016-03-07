@@ -15,7 +15,7 @@ A collection of various PHP classes for use with file systems
 
 ## Requirements
 
-Chadicus\Date requires PHP 5.4 (or later).
+Chadicus\Date requires PHP 5.5 (or later).
 
 ##Composer
 To add the library as a local, per-project dependency use [Composer](http://getcomposer.org)! Simply add a dependency on
