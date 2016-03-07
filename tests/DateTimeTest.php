@@ -69,4 +69,37 @@ final class DateTimeTest extends \PHPUnit_Framework_TestCase
         $dateTime = new \DateTime('now', new \DateTimeZone('Pacific/Honolulu'));
         $this->assertFalse(DateTime::isDaylightSavings($dateTime));
     }
+
+    /**
+     * Verify basic behavior of isInRange().
+     *
+     * @test
+     * @covers ::isInRange
+     *
+     * @return void
+     */
+    public function isInRange()
+    {
+        $currentDateTime = new \DateTime('now');
+        $startDateTime = new \DateTime('last year');
+        $endDateTime = new \DateTime('next year');
+        $this->assertTrue(DateTime::isInRange($currentDateTime, $startDateTime, $endDateTime));
+    }
+
+    /**
+     * Verify error behavior of isInRange().
+     *
+     * @test
+     * @covers ::isInRange
+     *
+     * @return void
+     */
+    public function isInRangeWithInvalidRange()
+    {
+        $currentDateTime = new \DateTime('now');
+        $startDateTime = new \DateTime('next year');
+        $endDateTime = new \DateTime('last year');
+        $this->setExpectedException('\DomainException');
+        DateTime::isInRange($currentDateTime, $startDateTime, $endDateTime);
+    }
 }
