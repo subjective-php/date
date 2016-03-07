@@ -52,7 +52,10 @@ final class DateTimeZoneTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Verify fromString() correctly converts edge case timezones
+     * Verify fromString() correctly converts edge case timezones.
+     *
+     * @param string $abbreviation The abbreviation to tests.
+     * @param string $expected     The expected result from the fromString() call.
      *
      * @test
      * @covers ::fromString
@@ -63,7 +66,9 @@ final class DateTimeZoneTest extends \PHPUnit_Framework_TestCase
     public function fromStringOutliers($abbreviation, $expected)
     {
         if (timezone_name_from_abbr($abbreviation) !== false) {
-            $this->markTestSkipped("The timezone abbreviation '{$abbreviation}' is not considered an outlier on this system");
+            $this->markTestSkipped(
+                "The timezone abbreviation '{$abbreviation}' is not considered an outlier on this system"
+            );
             return;
         }
 
