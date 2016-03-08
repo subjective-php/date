@@ -1,8 +1,16 @@
 <?php
 namespace Chadicus\Util;
 
+/**
+ * Static utility class for working with DateTimeZone objects.
+ */
 abstract class DateTimeZone
 {
+    /**
+     * Array of edge case timezones
+     *
+     * @var array
+     */
     private static $outliers = [
         'WIB' => 'Asia/Jakarta',  //Western Indonesian Time
         'FET' => 'Europe/Helsinki', //Further-eastern European Time
@@ -20,8 +28,6 @@ abstract class DateTimeZone
      * @param \DateTimeZone $default            The default timezone to return if none can be created.
      *
      * @return \DateTimeZone
-     *
-     * @throws \InvalidArgumentException Thrown if $default is not a string or \DateTimeZone object
      */
     final public static function fromString($nameOrAbbreviation, \DateTimeZone $default = null)
     {
@@ -63,7 +69,7 @@ abstract class DateTimeZone
     /**
      * Returns the long name of the given \DateTimeZone.
      *
-     * @param \DateTimeZone
+     * @param \DateTimeZone $timezone The timezone object from which the long name should be obtained.
      *
      * @return string
      */

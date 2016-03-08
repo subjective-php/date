@@ -63,8 +63,8 @@ abstract class DateTime
      * Returns true if the given date is between the provided date range.
      *
      * @param \DateTime $subjectDate The date/time object being checked.
-     * @param \DateTime $startDate The start date/time object.
-     * @param \DateTime $endDate The end date/time object.
+     * @param \DateTime $startDate   The start date/time object.
+     * @param \DateTime $endDate     The end date/time object.
      *
      * @return boolean
      * @throws \DomainException Thrown when an invalid date range is provided.
