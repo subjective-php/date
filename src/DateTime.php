@@ -1,6 +1,8 @@
 <?php
 namespace Chadicus\Util;
 
+use Chadicus\Util\Helper\AgoHelper;
+
 /**
  * Utility class for \DateTime objects.
  */
@@ -78,5 +80,17 @@ abstract class DateTime
             throw new \DomainException('Invalid date range provided.');
         }
         return ($subjectTimestamp >= $startDateTimestamp && $subjectTimestamp <= $endDateTimestamp);
+    }
+
+    /**
+     * Returns the date/time as a "time ago" string.
+     *
+     * @param \DateTime $dateTime The date/time object.
+     *
+     * @return string
+     */
+    final public static function asAgoString(\DateTime $dateTime)
+    {
+        return AgoHelper::getAgoString($dateTime);
     }
 }

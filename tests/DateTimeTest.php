@@ -2,6 +2,7 @@
 namespace ChadicusTest\Util;
 
 use Chadicus\Util\DateTime;
+use Chadicus\Util\Helper\AgoHelper;
 
 /**
  * Unit tests for the Chadicus\Util\DateTime class.
@@ -101,5 +102,19 @@ final class DateTimeTest extends \PHPUnit_Framework_TestCase
         $endDateTime = new \DateTime('last year');
         $this->setExpectedException('\DomainException');
         DateTime::isInRange($currentDateTime, $startDateTime, $endDateTime);
+    }
+
+    /**
+     * Verify basic behavior of asAgoString().
+     *
+     * @test
+     * @covers ::asAgoString
+     *
+     * @return void
+     */
+    public function asAgoString()
+    {
+        $dateTime = new \DateTime('yesterday');
+        $this->assertSame(AgoHelper::getAgoString($dateTime), DateTime::asAgoString($dateTime));
     }
 }
