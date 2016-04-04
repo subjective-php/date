@@ -1,8 +1,6 @@
 <?php
 namespace Chadicus\Util;
 
-use Chadicus\Util\Helper\AgoHelper;
-
 /**
  * Utility class for \DateTime objects.
  */
@@ -83,14 +81,41 @@ abstract class DateTime
     }
 
     /**
-     * Returns the date/time as a "time ago" string.
+     * Returns the given DateTime instance as a "time ago" string.
      *
-     * @param \DateTime $dateTime The date/time object.
+     * @param \DateTime $dateTime The DateTime object to present as an ago string.
      *
      * @return string
+     *
+     * @throws \DomainException Thrown if the given $dateTime is in the future.
      */
     final public static function asAgoString(\DateTime $dateTime)
     {
-        return AgoHelper::getAgoString($dateTime);
+        $numHours = round((time() - $dateTime->getTimestamp())/3600, 2);
+        if ($numHours < 0) {
+            throw new \DomainException('Cannot create "time ago" string for a date in the future.');
+        }
+
+        $formulas = [
+            '.025' => ['just now', 1],
+            '.5' => ['%d minutes ago', 60],
+            '1.5' => ['about an hour ago', 1],
+            '24' => ['about %d hours ago', 1],
+            '48' => ['yesterday', 1],
+            '168' => ['about %d days ago', 1/24],
+            '252' => ['last week', 1],
+            '672' => ['about %d weeks ago', 1/168],
+            '1080' => ['last month', 1],
+            '8760' => ['about %d months ago', 1/672],
+            '13140' => ['last year', 1],
+        ];
+
+        foreach ($formulas as $maxHours => $formula) {
+            if ($numHours < $maxHours) {
+                return sprintf($formula[0], round($numHours * $formula[1]));
+            }
+        }
+
+        return sprintf('about %s years ago', round($numHours/8064));
     }
 }

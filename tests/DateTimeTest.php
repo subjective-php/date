@@ -2,7 +2,6 @@
 namespace ChadicusTest\Util;
 
 use Chadicus\Util\DateTime;
-use Chadicus\Util\Helper\AgoHelper;
 
 /**
  * Unit tests for the Chadicus\Util\DateTime class.
@@ -109,12 +108,53 @@ final class DateTimeTest extends \PHPUnit_Framework_TestCase
      *
      * @test
      * @covers ::asAgoString
+     * @dataProvider provideAgoStringData
+     *
+     * @param string $dateTimeString    The date/time string.
+     * @param string $expectedAgoString The expected ago string.
      *
      * @return void
      */
-    public function asAgoString()
+    public function asAgoString($dateTimeString, $expectedAgoString)
     {
-        $dateTime = new \DateTime('yesterday');
-        $this->assertSame(AgoHelper::getAgoString($dateTime), DateTime::asAgoString($dateTime));
+        $this->assertSame($expectedAgoString, DateTime::asAgoString(new \DateTime($dateTimeString)));
+    }
+
+    /**
+     * Returns data for the asAgoString test.
+     *
+     * @return array
+     */
+    public function provideAgoStringData()
+    {
+        return [
+            [ '-1 minute', 'just now'],
+            [ '-2 minutes', '2 minutes ago'],
+            [ '-30 minutes', 'about an hour ago'],
+            [ '-10 hours', 'about 10 hours ago'],
+            [ '-25 hours', 'yesterday'],
+            [ '-3 days', 'about 3 days ago'],
+            [ '-8 days', 'last week'],
+            [ '-3 weeks', 'about 3 weeks ago'],
+            [ '-1 month', 'last month' ],
+            [ '-2 months', 'about 2 months ago' ],
+            [ '-12 months', 'last year' ],
+            [ '-1 year', 'last year' ],
+            [ '-4 years', 'about 4 years ago' ],
+        ];
+    }
+
+    /**
+     * Verify error behavior of asAgoString().
+     *
+     * @test
+     * @covers ::asAgoString
+     * @expectedException \DomainException
+     *
+     * @return void
+     */
+    public function asAgoStringWithFutureDate()
+    {
+        DateTime::asAgoString(new \DateTime('tomorrow'));
     }
 }
