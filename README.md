@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/chadicus/date-php.svg?branch=master)](https://travis-ci.org/chadicus/date-php)
 [![Code Quality](https://scrutinizer-ci.com/g/chadicus/date-php/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/chadicus/date-php/?branch=master)
 [![Coverage Status](https://coveralls.io/repos/github/chadicus/date-php/badge.svg?branch=master)](https://coveralls.io/github/chadicus/date-php?branch=master)
-[![Dependency Status](https://www.versioneye.com/user/projects/5606a7295a262f001e0001aa/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5606a7295a262f001e0001aa)
+[![Dependency Status](https://www.versioneye.com/user/projects/5606a7505a262f001a000089/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/5606a7505a262f001a000089)
 
 [![Latest Stable Version](https://poser.pugx.org/chadicus/date/v/stable)](https://packagist.org/packages/chadicus/date)
 [![Latest Unstable Version](https://poser.pugx.org/chadicus/date/v/unstable)](https://packagist.org/packages/chadicus/date)
@@ -14,11 +14,11 @@
 
 [![Documentation](https://img.shields.io/badge/reference-phpdoc-blue.svg?style=flat)](http://pholiophp.org/chadicus/date)
 
-A collection of various PHP classes for use with file systems
+A collection of various PHP classes for use with date, times and timezones.
 
 ## Requirements
 
-Chadicus\Date requires PHP 5.5 (or later).
+Chadicus\Date requires PHP 5.6 (or later).
 
 ##Composer
 To add the library as a local, per-project dependency use [Composer](http://getcomposer.org)! Simply add a dependency on
@@ -27,7 +27,7 @@ To add the library as a local, per-project dependency use [Composer](http://getc
 ```json
 {
     "require": {
-        "chadicus/date": "~1.0"
+        "chadicus/date": "~2.0"
     }
 }
 ```
