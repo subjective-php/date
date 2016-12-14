@@ -8,7 +8,7 @@ checks:
     php:
         custom_coding_standard:
             git_repository: 'https://github.com/chadicus/coding-standard'
-            git_version: '3264851a30a7305995998660ee239d1a3d1c311f'
+            git_version: '7e6f3114f1a73a78bee8f949afdff241d1ef7ee5'
             ruleset_path: 'Chadicus/ruleset.xml'
 tools:
     php_analyzer: true
