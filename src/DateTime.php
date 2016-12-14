@@ -110,9 +110,9 @@ abstract class DateTime
             '13140' => ['last year', 1],
         ];
 
-        foreach ($formulas as $maxHours => $formula) {
+        foreach ($formulas as $maxHours => list($format, $multiplier)) {
             if ($numHours < $maxHours) {
-                return sprintf($formula[0], round($numHours * $formula[1]));
+                return sprintf($format, round($numHours * $multiplier));
             }
         }
 
