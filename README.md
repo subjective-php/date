@@ -11,7 +11,7 @@
 [![Monthly Downloads](https://poser.pugx.org/subjective-php/date/d/monthly)](https://packagist.org/packages/subjective-php/date)
 [![Daily Downloads](https://poser.pugx.org/subjective-php/date/d/daily)](https://packagist.org/packages/subjective-php/date)
 
-[![Documentation](https://img.shields.io/badge/reference-phpdoc-blue.svg?style=flat)](http://pholiophp.org/subjective-php/date)
+[![Documentation](https://img.shields.io/badge/reference-phpdoc-blue.svg?style=flat)](http://www.pholiophp.org/subjective-php/date)
 
 A collection of various PHP classes for use with date, times and timezones.
 
