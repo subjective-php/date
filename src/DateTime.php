@@ -1,5 +1,5 @@
 <?php
-namespace Chadicus\Util;
+namespace SubjectivePHP\Util;
 
 /**
  * Utility class for \DateTime objects.

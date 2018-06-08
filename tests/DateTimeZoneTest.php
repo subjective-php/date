@@ -1,11 +1,11 @@
 <?php
-namespace ChadicusTest\Util;
+namespace SubjectivePHPTest\Util;
 
-use Chadicus\Util\DateTimeZone;
+use SubjectivePHP\Util\DateTimeZone;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @coversDefaultClass \Chadicus\Util\DateTimeZone
+ * @coversDefaultClass \SubjectivePHP\Util\DateTimeZone
  * @covers ::<private>
  */
 final class DateTimeZoneTest extends TestCase
@@ -99,7 +99,7 @@ final class DateTimeZoneTest extends TestCase
      *
      * @test
      * @covers ::fromOffset
-     * @uses \Chadicus\Util\DateTimeZone::fromString
+     * @uses \SubjectivePHP\Util\DateTimeZone::fromString
      *
      * @return void
      */
