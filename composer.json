@@ -1,5 +1,5 @@
 {
-    "name": "chadicus/date",
+    "name": "subjective-php/date",
     "description": "A collection of various PHP classes for use with PHP's DateTime extension.",
     "keywords": ["date", "time", "timezone"],
     "config": {
