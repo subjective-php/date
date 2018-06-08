@@ -1,5 +1,5 @@
 <?php
-namespace Chadicus\Util;
+namespace SubjectivePHP\Util;
 
 /**
  * Static utility class for working with DateTimeZone objects.

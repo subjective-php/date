@@ -1,13 +1,13 @@
 <?php
-namespace ChadicusTest\Util;
+namespace SubjectivePHPTest\Util;
 
-use Chadicus\Util\DateTime;
+use SubjectivePHP\Util\DateTime;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Unit tests for the Chadicus\Util\DateTime class.
+ * Unit tests for the SubjectivePHP\Util\DateTime class.
  *
- * @coversDefaultClass \Chadicus\Util\DateTime
+ * @coversDefaultClass \SubjectivePHP\Util\DateTime
  * @covers ::<private>
  */
 final class DateTimeTest extends TestCase
