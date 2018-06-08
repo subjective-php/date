@@ -2,12 +2,13 @@
 namespace ChadicusTest\Util;
 
 use Chadicus\Util\DateTimeZone;
+use PHPUnit\Framework\TestCase;
 
 /**
  * @coversDefaultClass \Chadicus\Util\DateTimeZone
  * @covers ::<private>
  */
-final class DateTimeZoneTest extends \PHPUnit_Framework_TestCase
+final class DateTimeZoneTest extends TestCase
 {
     /**
      * Verify basic behavior of fromString()
