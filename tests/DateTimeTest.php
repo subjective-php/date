@@ -2,6 +2,7 @@
 namespace ChadicusTest\Util;
 
 use Chadicus\Util\DateTime;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Unit tests for the Chadicus\Util\DateTime class.
@@ -9,7 +10,7 @@ use Chadicus\Util\DateTime;
  * @coversDefaultClass \Chadicus\Util\DateTime
  * @covers ::<private>
  */
-final class DateTimeTest extends \PHPUnit_Framework_TestCase
+final class DateTimeTest extends TestCase
 {
     /**
      * Verify basic behavior of isWeekDay().
@@ -91,6 +92,7 @@ final class DateTimeTest extends \PHPUnit_Framework_TestCase
      *
      * @test
      * @covers ::isInRange
+     * @expectedException \DomainException
      *
      * @return void
      */
@@ -99,7 +101,6 @@ final class DateTimeTest extends \PHPUnit_Framework_TestCase
         $currentDateTime = new \DateTime('now');
         $startDateTime = new \DateTime('next year');
         $endDateTime = new \DateTime('last year');
-        $this->setExpectedException('\DomainException');
         DateTime::isInRange($currentDateTime, $startDateTime, $endDateTime);
     }
 
