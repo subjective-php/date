@@ -2,6 +2,9 @@
     "name": "chadicus/date",
     "description": "A collection of various PHP classes for use with PHP's DateTime extension.",
     "keywords": ["date", "time", "timezone"],
+    "config": {
+        "sort-packages": true
+    },
     "authors": [
         {
             "name": "Chad Gray",
