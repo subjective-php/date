@@ -16,6 +16,6 @@
         "symfony/yaml": ">=2.0.5"
     },
     "autoload": {
-        "psr-4": { "SubjectivePHP\\Util\\": "src" }
+        "psr-4": { "SubjectivePHP\\": "src" }
     }
 }
