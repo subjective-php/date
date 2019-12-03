@@ -1,8 +1,10 @@
 <?php
 namespace SubjectivePHP\Util;
 
+use SubjectivePHP\DateTime\Utilities\DateTimeZoneUtil;
+
 /**
- * Static utility class for working with DateTimeZone objects.
+ * @deprecated Will be removed in version 4
  */
 abstract class DateTimeZone
 {
@@ -31,15 +33,7 @@ abstract class DateTimeZone
      */
     final public static function fromString($nameOrAbbreviation, \DateTimeZone $default = null)
     {
-        try {
-            return new \DateTimeZone($nameOrAbbreviation);
-        } catch (\Exception $e) {
-            if (array_key_exists($nameOrAbbreviation, self::$outliers)) {
-                return new \DateTimeZone(self::$outliers[$nameOrAbbreviation]);
-            }
-
-            return $default;
-        }
+        return DateTimeZoneUtil::fromString($nameOrAbbreviation, $default);
     }
 
     /**
@@ -63,7 +57,7 @@ abstract class DateTimeZone
             throw new \InvalidArgumentException('$isDaylightSavings must be a boolean');
         }
 
-        return self::fromString(timezone_name_from_abbr('', $gmtOffset, (int)$isDaylightSavings));
+        return DateTimeZoneUtil::fromString(timezone_name_from_abbr('', $gmtOffset, (int)$isDaylightSavings));
     }
 
     /**
@@ -75,13 +69,6 @@ abstract class DateTimeZone
      */
     final public static function getLongName(\DateTimeZone $timezone)
     {
-        $nameFromTimeZone = $timezone->getName();
-        if (strlen($nameFromTimeZone) > 6) {
-            return $nameFromTimeZone;
-        }
-
-        $nameFromAbbr = timezone_name_from_abbr($nameFromTimeZone);
-
-        return $nameFromAbbr === false ? $nameFromTimeZone : $nameFromAbbr;
+        return DateTimeZoneUtil::getLongName($timezone);
     }
 }
