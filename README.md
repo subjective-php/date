@@ -13,7 +13,7 @@
 
 [![Documentation](https://img.shields.io/badge/reference-phpdoc-blue.svg?style=flat)](http://www.pholiophp.org/subjective-php/date)
 
-A collection of various PHP classes for use with date, times and timezones.
+A collection of various PHP classes for use with dates, times and timezones.
 
 ## Requirements
 
