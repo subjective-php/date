@@ -3,11 +3,12 @@
 namespace SubjectivePHP\DateTime\Utilities;
 
 use DateTimeInterface;
+use SubjectivePHP\DateTime\Constants\DayOfWeekInterface;
 
 /**
  * Utility class for DateTimeInterface objects.
  */
-abstract class DateTimeUtil
+abstract class DateTimeUtil implements DayOfWeekInterface
 {
     /**
      * Returns true if the given date time is a Saturday or Sunday.
@@ -18,8 +19,7 @@ abstract class DateTimeUtil
      */
     final public static function isWeekendDay(DateTimeInterface $dateTime) : bool
     {
-        //ISO-8601 numeric representation of the day of the week, 1 (for Monday) through 7 (for Sunday)
-        return $dateTime->format('N') > 5;
+        return (int)$dateTime->format('N') > (int)self::ISO_FRIDAY;
     }
 
     /**
@@ -31,8 +31,7 @@ abstract class DateTimeUtil
      */
     final public static function isWeekDay(DateTimeInterface $dateTime) : bool
     {
-        //ISO-8601 numeric representation of the day of the week, 1 (for Monday) through 7 (for Sunday)
-        return $dateTime->format('N') < 6;
+        return (int)$dateTime->format('N') < (int)self::ISO_SATURDAY;
     }
 
     /**
