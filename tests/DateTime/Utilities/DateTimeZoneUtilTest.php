@@ -76,7 +76,7 @@ final class DateTimeZoneUtilTest extends TestCase
      *
      * @return array
      */
-    public function getOutliers() : array
+    public static function getOutliers() : array
     {
         return [
             ['WIB', DateTimeZoneUtil::TIMEZONE_ASIA_JAKARTA],

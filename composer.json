@@ -16,6 +16,9 @@
     "autoload": {
         "psr-4": { "SubjectivePHP\\": "src" }
     },
+    "autoload-dev": {
+        "psr-4": { "SubjectivePHPTest\\": "tests" }
+    },
     "scripts": {
         "lint": "vendor/bin/phpcs",
         "test": "vendor/bin/phpunit"

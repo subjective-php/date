@@ -1,6 +1,6 @@
 <?php
 
-namespace SubjectivePHPTestDateTime\Utilities;
+namespace SubjectivePHPTest\DateTime\Utilities;
 
 use DateTime;
 use DateTimeZone;
@@ -14,7 +14,7 @@ use SubjectivePHP\DateTime\Utilities\DateTimeUtil;
  * @coversDefaultClass \SubjectivePHP\DateTime\Utilities\DateTimeUtil
  * @covers ::<private>
  */
-final class DateTimeTest extends TestCase
+final class DateTimeUtilTest extends TestCase
 {
     /**
      * Verify basic behavior of isWeekDay().
@@ -130,7 +130,7 @@ final class DateTimeTest extends TestCase
      *
      * @return array
      */
-    public function provideAgoStringData()
+    public static function provideAgoStringData()
     {
         return [
             [ '-1 minute', 'just now'],
