@@ -1,6 +1,7 @@
 <?php
 namespace SubjectivePHPTest\Util;
 
+use InvalidArgumentException;
 use SubjectivePHP\Util\DateTimeZone;
 use PHPUnit\Framework\TestCase;
 
@@ -114,13 +115,13 @@ final class DateTimeZoneTest extends TestCase
      *
      * @test
      * @covers ::fromOffset
-     * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage $gmtOffset must be an integer
      *
      * @return void
      */
     public function fromOffsetInvalidOffsetValue()
     {
+        $this->expectException(InvalidArgumentException::class);
+        $this->expectExceptionMessage('$gmtOffset must be an integer');
         DateTimeZone::fromOffset(false, false);
     }
 
@@ -129,13 +130,13 @@ final class DateTimeZoneTest extends TestCase
      *
      * @test
      * @covers ::fromOffset
-     * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage $isDaylightSavings must be a boolean
      *
      * @return void
      */
     public function fromOffsetInvalidDSTValue()
     {
+        $this->expectException(InvalidArgumentException::class);
+        $this->expectExceptionMessage('$isDaylightSavings must be a boolean');
         DateTimeZone::fromOffset(-36000, 0);
     }
 
