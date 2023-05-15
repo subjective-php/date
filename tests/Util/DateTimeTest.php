@@ -1,6 +1,7 @@
 <?php
 namespace SubjectivePHPTest\Util;
 
+use DomainException;
 use SubjectivePHP\Util\DateTime;
 use PHPUnit\Framework\TestCase;
 
@@ -92,12 +93,12 @@ final class DateTimeTest extends TestCase
      *
      * @test
      * @covers ::isInRange
-     * @expectedException \DomainException
      *
      * @return void
      */
     public function isInRangeWithInvalidRange()
     {
+        $this->expectException(DomainException::class);
         $currentDateTime = new \DateTime('now');
         $startDateTime = new \DateTime('next year');
         $endDateTime = new \DateTime('last year');
@@ -150,12 +151,12 @@ final class DateTimeTest extends TestCase
      *
      * @test
      * @covers ::asAgoString
-     * @expectedException \DomainException
      *
      * @return void
      */
     public function asAgoStringWithFutureDate()
     {
+        $this->expectException(DomainException::class);
         DateTime::asAgoString(new \DateTime('tomorrow'));
     }
 }
