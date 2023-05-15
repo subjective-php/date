@@ -1,6 +1,4 @@
 # SubjectivePHP\Date
-[![Code Quality](https://scrutinizer-ci.com/g/subjective-php/date/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/subjective-php/date/?branch=master)
-
 [![Latest Stable Version](https://poser.pugx.org/subjective-php/date/v/stable)](https://packagist.org/packages/subjective-php/date)
 [![Latest Unstable Version](https://poser.pugx.org/subjective-php/date/v/unstable)](https://packagist.org/packages/subjective-php/date)
 [![License](https://poser.pugx.org/subjective-php/date/license)](https://packagist.org/packages/subjective-php/date)
