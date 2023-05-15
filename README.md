@@ -1,7 +1,6 @@
 # SubjectivePHP\Date
 [![Build Status](https://travis-ci.org/subjective-php/date.svg?branch=master)](https://travis-ci.org/subjective-php/date)
 [![Code Quality](https://scrutinizer-ci.com/g/subjective-php/date/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/subjective-php/date/?branch=master)
-[![Coverage Status](https://coveralls.io/repos/github/subjective-php/date/badge.svg?branch=master)](https://coveralls.io/github/subjective-php/date?branch=master)
 
 [![Latest Stable Version](https://poser.pugx.org/subjective-php/date/v/stable)](https://packagist.org/packages/subjective-php/date)
 [![Latest Unstable Version](https://poser.pugx.org/subjective-php/date/v/unstable)](https://packagist.org/packages/subjective-php/date)
