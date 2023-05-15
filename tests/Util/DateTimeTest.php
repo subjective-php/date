@@ -127,7 +127,7 @@ final class DateTimeTest extends TestCase
      *
      * @return array
      */
-    public function provideAgoStringData()
+    public static function provideAgoStringData()
     {
         return [
             [ '-1 minute', 'just now'],

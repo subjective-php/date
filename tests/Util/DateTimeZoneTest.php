@@ -82,7 +82,7 @@ final class DateTimeZoneTest extends TestCase
      *
      * @return array
      */
-    public function getOutliers()
+    public static function getOutliers()
     {
         return [
             ['WIB', 'Asia/Jakarta'],
